@@ -1,0 +1,256 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.logo a {
+    text-decoration: none;
+}
+.Text a {
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: beige;
+    overflow: hidden;
+}
+.container .nav-bar{
+    width: 100%;
+    height: 10vh;
+    background-image:linear-gradient( slateblue, pink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.logo a{
+    font-size: 40px;
+    color: deeppink;
+    margin-left: 20px;
+}
+.container .nav-bar .Text a{
+    font-size: 19px;
+    letter-spacing: 2px;
+    padding:10px;
+    color: black;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: all 0.6;
+    opacity: 0.7;
+}
+.Text{
+    animation-name: TexT;
+    animation-duration: 2s;
+}
+.container .nav-bar .Text a .active{
+    opacity: 1;
+}
+.container .nav-bar .Text a:hover{
+    opacity: 1;
+}
+.ICON a {
+    color: beige;
+    opacity: 0.5;
+    transition: all 0.5s;
+    margin-left: 20px;
+}
+.ICON a:hover{
+    opacity: 1;
+}
+.Content{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+.Content .Name h1{
+    font-size: 50px;
+    text-shadow: 10px 10px 20px black;
+    background-color: blueviolet;
+    background-image: url("./gif3.gif");
+    background-size: contain;
+    background-clip: text;
+    color:transparent;
+
+}
+span{
+    font-size: 50px;
+    text-shadow: 10px 10px 20px black;
+    background-color: blueviolet;
+    background-image: url("./gif3.gif");
+    background-size: contain;
+    background-clip: text;
+    color:transparent;
+}
+.Content .Con-Text{
+    font-size: 23px;
+    color: black;
+    margin-top: 10px;
+    padding: 10px;
+}
+.Content .but{
+    position: absolute;
+    left: 110px;
+    margin-top: 30px;
+    
+}
+
+button {
+    display: flex;
+    font-size: 25px;
+    padding: 5px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    background-color: tomato;
+    border: none;
+}
+
+button i{
+    font-size: 20px;
+    color: white;
+}
+.Content .produ-design{
+    display: flex;
+    gap: 20px 40px;
+    position: absolute;
+    top: 400px;
+}
+.produ span{
+    background-color: blueviolet;
+    background-image: url("./gif1.gif");
+    background-size: contain;
+    background-clip: text;
+    color:transparent;
+    font-size: 40px;
+}
+.desig span{
+    background-color: blueviolet;
+    background-image: url("./gif1.gif");
+    background-size: contain;
+    background-clip: text;
+    color:transparent;
+    font-size: 40px;
+}
+.produ p{
+    font-size: 25px;
+    padding-left: 5px;
+}
+.desig p{
+    font-size: 25px;
+    padding-left: 5px;
+}
+.car-image{
+    width:60%;
+    height: 90vh;
+    background-image: linear-gradient(pink blue);
+}
+.car2{
+    width: 750px;
+    height: 300px;
+    position:absolute;
+    left: -170px;
+    top: 200px;
+    animation-name: CAR-2;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwardsb;
+}
+.car3{
+    width: 700px;
+    height: 300px;
+    position:absolute;
+    right: 60px;
+    top: 200px;
+    animation-name: CAR-3;
+    animation-delay: 5s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    transition: all;
+    animation-fill-mode: backwards;
+}
+.TextA{
+    background-image: linear-gradient(yellow,pink,pink, pink, navy);
+    width: 40%;
+    height: 90vh;
+    padding: 10px;
+    z-index: 999;
+}
+.TextB{
+    background-image: linear-gradient( yellow,pink, pink, pink, navy);
+    width: 60%;
+    height: 90vh;
+    background-repeat: no-repeat;
+}
+button::after{
+    content:"";
+    height:5%;
+    width:0%;
+    position: absolute;
+    background: magenta;
+    transition: all 2s;
+    left:4%;
+    bottom:-2%;
+}
+button::before{
+    content:"";
+    height:5%;
+    width:0%;
+    position: absolute;
+    background-color:blue;
+    transition: all 2s;
+    right:4%;
+    top:-2%; 
+}
+button:hover::after{
+    width:50%;
+}
+button:hover::before{
+    width:50%;
+}
+@keyframes TexT{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes CAR-2{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%); 
+    }
+}
+@keyframes CAR-3{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%); 
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        
+    }
+    .nav-box{
+        flex-direction: column;
+        width: 100%;
+        height: 30vh;
+    }
+} 

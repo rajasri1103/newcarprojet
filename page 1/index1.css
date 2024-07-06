@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./smoke.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.nav-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: pink ;
+    width: 100%;
+    height: 10vh;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    animation-name: handpare;
+    animation-duration: 2s;  
+    animation-iteration-count: infinite; 
+}
+.LOGO{
+    padding-left: 10px;
+}
+.navbar{
+    font-size: 25px;
+    word-spacing: 20px;
+    padding-right: 10px;
+    margin-top:8px;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.navbar a:hover{
+    text-shadow: 10px 10px 10px black;
+    animation-name: joseph;
+    transition: all;
+    animation-duration: 2s;
+}
+.first{
+    position: relative;
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 10px 10px 10px palevioletred;
+    animation-name: john;
+    animation-duration: 3s;
+    transform: scale(1.1);
+    animation-iteration-count: infinite;
+}
+a{
+    color: whitesmoke;  
+}
+h1{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    overflow: hidden;
+}
+@keyframes john{
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1.0);
+    }
+}
+@keyframes handpare{
+    0%{
+        rotate:360deg;
+    }
+    100%{
+        rotate: 0deg;
+    } 
+}
+@keyframes joseph{
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1.0);
+    }
+}
+
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        
+    }
+    .nav-box{
+        flex-direction: column;
+        width: 100%;
+        height: 30vh;
+    }
+} 
